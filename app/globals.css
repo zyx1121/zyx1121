@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -56,5 +55,50 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  h1 {
+    @apply scroll-m-20 font-semibold tracking-tight text-4xl lg:text-5xl dark:text-white pb-4;
+  }
+  h2 {
+    @apply scroll-m-20 font-semibold tracking-tight text-2xl first:mt-0 mt-10;
+  }
+  h3 {
+    @apply scroll-m-20 font-semibold tracking-tight text-xl ;
+  }
+  h4 {
+    @apply scroll-m-20 text-xl font-semibold tracking-tight;
+  }
+  article p {
+    @apply text-base [&:not(:first-child)]:mt-4;
+  }
+  article blockquote {
+    @apply mt-6 border-l-2 pl-6 italic;
+  }
+  article table {
+    @apply w-full;
+  }
+  article tr {
+    @apply m-0 border-t p-0 even:bg-muted;
+  }
+  article th {
+    @apply border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right;
+  }
+  article ul {
+    @apply my-4 ml-6 list-disc [&>li]:mt-2;
+  }
+  article ul li {
+    list-style: '�� ';
+  }
+  article ul li ul li {
+    list-style: '�� ';
+  }
+  article code {
+    @apply bg-muted text-muted-foreground rounded px-2;
+  }
+  pre code {
+    @apply block overflow-scroll my-4 relative rounded-lg p-4 text-sm;
+  }
+  article a {
+    @apply bg-muted text-muted-foreground rounded px-2;
   }
 }
