@@ -1,14 +1,9 @@
 "use client"
 
-import { Navbar } from "@/components/navbar/Navbar"
-
 export default function Note() {
   return (
-    <>
-      <Navbar />
-      <main className="w-[100dvw] h-[100dvh] flex items-center justify-center">
-        Note
-      </main>
-    </>
+    <main className="w-[100dvw] h-[100dvh] flex items-center justify-center">
+      施工中...
+    </main>
   )
 }
