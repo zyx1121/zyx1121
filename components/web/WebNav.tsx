@@ -5,7 +5,7 @@ import { animated, useSpring } from "@react-spring/web"
 import { usePathname, useRouter } from "next/navigation"
 import { useEffect } from "react"
 
-export function Navbar() {
+export function WebNav() {
   const router = useRouter()
   const pathname = usePathname()
 
@@ -36,7 +36,7 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="absolute flex flex-col gap-4 p-4">
+      <nav className="absolute flex flex-col gap-4 p-4 h-[100dvh] justify-center">
         <Button variant="ghost" disabled={pathname === "/" ? true : false} onClick={() => routeTransitionLeave(() => router.push("/"))}>
           Home
         </Button>
