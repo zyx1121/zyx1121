@@ -57,13 +57,13 @@
     @apply bg-background text-foreground;
   }
   h1 {
-    @apply scroll-m-20 font-semibold tracking-tight text-4xl lg:text-5xl dark:text-white pb-4;
+    @apply scroll-m-20 font-semibold tracking-tight text-4xl lg:text-5xl pb-4;
   }
   h2 {
-    @apply scroll-m-20 font-semibold tracking-tight text-2xl first:mt-0 mt-10;
+    @apply scroll-m-20 font-semibold tracking-tight text-2xl lg:text-3xl;
   }
   h3 {
-    @apply scroll-m-20 font-semibold tracking-tight text-xl ;
+    @apply scroll-m-20 font-semibold tracking-tight text-xl lg:text-2xl;
   }
   h4 {
     @apply scroll-m-20 text-xl font-semibold tracking-tight;
@@ -87,10 +87,10 @@
     @apply my-4 ml-6 list-disc [&>li]:mt-2;
   }
   article ul li {
-    list-style: '�� ';
+    list-style: '★ ';
   }
   article ul li ul li {
-    list-style: '�� ';
+    list-style: '☆ ';
   }
   article code {
     @apply bg-muted text-muted-foreground rounded px-2;
