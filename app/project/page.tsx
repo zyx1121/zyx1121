@@ -1,9 +1,22 @@
-"use client"
+import { Block } from "@/components/web/Block"
+import { getSortedContents } from "@/lib/contents"
 
-export default function Project() {
+export default async function Project() {
+  const sortedContents = getSortedContents()
+
   return (
-    <main className="w-[100dvw] h-[100dvh] flex items-center justify-center">
-      施工中...
+    <main className="w-[100dvw] h-[100dvh] grid items-center justify-center">
+      <section>
+        <h1 className="p-4 mb-8">專案</h1>
+        <ul className="[&>li]:mt-2">
+          {sortedContents.map(({ id, type, date, title, draft }) =>
+            (draft === false && type === "project") &&
+            <li key={id}>
+              <Block title={title} date={date} />
+            </li>
+          )}
+        </ul>
+      </section>
     </main>
   )
 }
