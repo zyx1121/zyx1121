@@ -50,7 +50,7 @@ export function WebNav() {
       <animated.div
         style={{
           position: "absolute",
-          width: "100dvw",
+          width: "100%",
           background: "#ff6d6d",
           ...springs,
         }}
