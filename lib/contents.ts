@@ -4,9 +4,9 @@ import { join } from "path"
 import { remark } from "remark"
 import html from "remark-html"
 
-const contentDirectory = join(process.cwd(), "content")
+const contentDirectory = join(process.cwd(), "contents")
 
-export function getSortedContent() {
+export function getSortedContents() {
   const fileNames = readdirSync(contentDirectory)
 
   const allPostsData = fileNames.map((fileName) => {
@@ -15,7 +15,6 @@ export function getSortedContent() {
     const fileContents = readFileSync(fullPath, "utf8")
     const matterResult = matter(fileContents)
     const tags: string[] = []
-
     matterResult.data.tags.forEach((tag: string) => { tags.push(tag) })
 
     return {
