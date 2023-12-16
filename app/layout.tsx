@@ -1,3 +1,5 @@
+import { ClientSessionProvider } from "@/components/providers/SessionProvider"
+import { Account } from "@/components/web/Account"
 import { WebNav } from "@/components/web/WebNav"
 import { cn } from "@/lib/utils"
 import type { Metadata } from "next"
@@ -15,8 +17,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={cn("min-h-[100dvh] bg-background font-mono antialiased dark", font.variable)}>
-        <WebNav />
-        {children}
+        <ClientSessionProvider>
+          <WebNav />
+          <Account />
+          {children}
+        </ClientSessionProvider>
       </body>
     </html>
   )
