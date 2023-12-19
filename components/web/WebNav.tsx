@@ -57,9 +57,9 @@ export function WebNav() {
     //   />
     // </>
     <>
-      <nav className="absolute flex gap-2 p-6 h-[100dvh] justify-center mx-auto w-full">
+      <nav className="absolute flex gap-2 p-6 justify-center mx-auto w-full">
         <Button variant={pathname === "/" ? "default" : "ghost"} onClick={() => pathname !== "/" && routeTransitionLeave(() => router.push("/"))}>
-          Home
+          ★
         </Button>
         <Button variant={pathname === "/note" ? "default" : "ghost"} onClick={() => pathname !== "/note" && routeTransitionLeave(() => router.push("/note"))}>
           有的沒的
