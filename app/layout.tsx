@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={cn("min-h-[100dvh] bg-background font-mono antialiased dark", font.variable)}>
         <ClientSessionProvider>
           <WebNav />
-          <Account />
+          {/* <Account /> */}
           {children}
         </ClientSessionProvider>
       </body>

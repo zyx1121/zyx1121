@@ -56,8 +56,8 @@ export function WebNav() {
     //     }}
     //   />
     // </>
-    <>
-      <nav className="absolute flex gap-2 p-6 justify-center mx-auto w-full">
+    <div className="absolute flex w-full justify-center">
+      <nav className="absolute flex gap-2 m-4 p-2 z-10 rounded-lg backdrop-blur">
         <Button variant={pathname === "/" ? "default" : "ghost"} onClick={() => pathname !== "/" && routeTransitionLeave(() => router.push("/"))}>
           ★
         </Button>
@@ -80,6 +80,6 @@ export function WebNav() {
           ...springs,
         }}
       />
-    </>
+    </div>
   )
 }

@@ -1,20 +1,25 @@
 import { Block } from "@/components/web/Block"
-import { getSortedContents } from "@/lib/contents"
+import { getBlogPosts } from "@/lib/posts"
+import Link from "next/link"
 
 export default async function Note() {
-  const sortedContents = getSortedContents()
+  let allBlogs = getBlogPosts()
 
   return (
     <main className="w-[100dvw] h-[100dvh] grid items-center justify-center">
       <section>
-        <ul className="[&>li]:mt-2">
-          {sortedContents.map(({ id, type, date, title, draft }) =>
-            (draft === false && type === "note") &&
-            <li key={id}>
-              <Block title={title} date={date} />
-            </li>
-          )}
-        </ul>
+        {allBlogs
+          .sort((a, b) => {
+            if (new Date(a.metadata.date) > new Date(b.metadata.date))
+              return -1;
+            else
+              return 1;
+          })
+          .map((post) => (
+            <Link key={post.slug} href={`/note/${post.slug}`}>
+              <Block title={post.metadata.title} date={post.metadata.date} />
+            </Link>
+          ))}
       </section>
     </main>
   )
