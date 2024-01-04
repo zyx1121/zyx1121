@@ -36,7 +36,7 @@ export function Block({ title, date }: { title: string, date: string }) {
           {title}
         </h3>
         <time className="block text-muted-foreground text-sm" dateTime={date}>
-          {format(parseISO(date), 'yyyy年 L月 d日')}
+          {format(parseISO(date), 'yyyy 年 L 月 d 日')}
         </time>
       </animated.div>
     </div>
