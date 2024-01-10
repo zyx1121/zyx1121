@@ -1,85 +1,24 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { animated, useSpring } from "@react-spring/web"
-import { usePathname, useRouter } from "next/navigation"
-import { useEffect } from "react"
+import { useRouter } from "next/navigation"
+import { Button } from "../ui/button"
 
 export function WebNav() {
   const router = useRouter()
-  const pathname = usePathname()
-
-  const [springs, api] = useSpring(() => ({
-    from: { height: "100dvh", y: "0" },
-  }))
-
-  const routeTransitionJoin = () => {
-    api.start({
-      from: { height: "100dvh" },
-      to: { height: "0dvh" },
-    })
-  }
-
-  const routeTransitionLeave = (route: any) => {
-    api.start({
-      from: { height: "100dvh", y: "100dvh" },
-      to: { height: "100dvh", y: "0dvh" },
-      onResolve: () => {
-        route()
-      }
-    })
-  }
-
-  useEffect(() => {
-    routeTransitionJoin()
-  })
 
   return (
-    // <>
-    //   <nav className="absolute flex flex-col gap-4 p-4 h-[100dvh] justify-center">
-    //     <Button variant="ghost" disabled={pathname === "/" ? true : false} onClick={() => routeTransitionLeave(() => router.push("/"))}>
-    //       Home
-    //     </Button>
-    //     <Button variant="ghost" disabled={pathname === "/note" ? true : false} onClick={() => routeTransitionLeave(() => router.push("/note"))}>
-    //       Note
-    //     </Button>
-    //     <Button variant="ghost" disabled={pathname === "/project" ? true : false} onClick={() => routeTransitionLeave(() => router.push("/project"))}>
-    //       Project
-    //     </Button>
-    //   </nav>
-    //   <animated.div
-    //     style={{
-    //       position: "absolute",
-    //       width: "100%",
-    //       background: "#ff6d6d",
-    //       ...springs,
-    //     }}
-    //   />
-    // </>
     <div className="absolute flex w-full justify-center">
-      <nav className="absolute flex gap-2 m-4 p-2 z-10 rounded-lg backdrop-blur">
-        <Button variant={pathname === "/" ? "default" : "ghost"} onClick={() => pathname !== "/" && routeTransitionLeave(() => router.push("/"))}>
-          ★
+      <nav className="absolute flex m-4 p-2 z-10 rounded-lg backdrop-blur">
+        <Button variant="ghost" onClick={() => router.push("/")}>
+          關於
         </Button>
-        <Button variant={pathname === "/note" ? "default" : "ghost"} onClick={() => pathname !== "/note" && routeTransitionLeave(() => router.push("/note"))}>
-          有的沒的
+        <Button variant="ghost" onClick={() => router.push("/note")}>
+          筆記
         </Button>
-        <Button variant={pathname === "/project" ? "default" : "ghost"} onClick={() => pathname !== "/project" && routeTransitionLeave(() => router.push("/project"))}>
-          作品
-        </Button>
-        <Button variant={pathname === "/store" ? "default" : "ghost"} onClick={() => pathname !== "/store" && routeTransitionLeave(() => router.push("/store"))}>
-          雜貨店
+        <Button variant="ghost" onClick={() => router.push("/project")}>
+          專案
         </Button>
       </nav>
-      <animated.div
-        style={{
-          position: "fixed",
-          zIndex: 99,
-          width: "100%",
-          background: "#ff6d6d",
-          ...springs,
-        }}
-      />
     </div>
   )
 }
