@@ -15,9 +15,9 @@
  *  User: zyx1121
  *
  *  Tech Stack:
- *    - Languages: C, Python, Verilog
- *    - Frameworks: React, Next.js
- *    - Tools: Git, Docker, VSCode, Copilot
+ *    - Python, TypeScript, C, Verilog
+ *    - React, Next.js
+ *    - Git, Docker
  *
  *  Hobbies:
  *    - Playing games
