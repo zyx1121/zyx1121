@@ -17,7 +17,7 @@
  *  Tech Stack:
  *    - Python, TypeScript, C, Verilog
  *    - React, Next.js
- *    - Git, Docker
+ *    - Git, Docker, Wireshark, Scapy
  *
  *  Hobbies:
  *    - Playing games
