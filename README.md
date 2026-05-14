@@ -17,7 +17,7 @@ This repo is the index of that work. Each project below is a small ecosystem on 
 
 ### Capability — *what can you reach?*
 - **[`skills`](https://github.com/zyx1121/skills)** — Playbooks the agent loads mid-session, only when the conversation calls for them.
-- **[`utils`](https://github.com/zyx1121/utils)** — Agent-first CLI toolbox. Throwaway scripts get observed → reviewed → promoted. The repo grows itself.
+- **[`utils`](https://github.com/zyx1121/utils)** — Agent-first CLI toolbox. Polyglot atoms (Python, bash, AppleScript) from JSON / hash / SSL to macOS app integration (clipboard, screenshot, Mail, Calendar, Keynote, …). Throwaway scripts get observed → reviewed → promoted. The repo grows itself.
 
 ### Memory — *what do you remember?*
 - **[`scriptorium`](https://github.com/zyx1121/scriptorium)** — Self-hosted LLM wiki. Karpathy's pattern over Postgres + MCP. Synthesis happens at write-time so queries skip the rediscovery tax.
