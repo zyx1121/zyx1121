@@ -1,8 +1,8 @@
 <img src="og.svg" width="100%" />
 
-## Hey, I'm Loki — 詹詠翔.
+<p align="center"><em>Hey, I'm Loki — 詹詠翔.</em></p>
 
-MS in CS at [NYCU](https://www.cs.nycu.edu.tw), with [WinLab](https://www.winlab.tw).
+<p align="center"><em>MS in CS at <a href="https://www.cs.nycu.edu.tw">NYCU</a>, with <a href="https://www.winlab.tw">WinLab</a>.</em></p>
 
 <p align="center"><em>Science and engineering are how we stay alive, and art and culture are what we live for.</em></p>
 
