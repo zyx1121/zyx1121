@@ -4,4 +4,4 @@
 
 <p align="center"><em>i build things.</em></p>
 
-<p align="center"><sub><a href="https://www.zyx.tw">zyx.tw</a> · <a href="mailto:mail@zyx.tw">mail@zyx.tw</a></sub></p>
+<p align="center"><sub><a href="https://www.zyx.tw">zyx.tw</a>  |  <a href="mailto:mail@zyx.tw">mail@zyx.tw</a></sub></p>
